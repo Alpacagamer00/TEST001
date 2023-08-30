@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  window.onload = function() {
+    var targetURL = "https://github.com/Alpacagamer00/TEST001.git"; // Set the URL you want to open
+    var repeatCount = 5; // Set the number of times to repeat
+
+    function openWindows(count) {
+      if (count <= 0) {
+        return;
+      }
+
+      // Open the specified URL in a new browser window
+      window.open(targetURL, '_blank', 'width=800,height=600');
+
+      setTimeout(function () {
+        openWindows(count - 1);
+      }, 1000); // Delay between opening windows (in milliseconds)
+    }
+
+    openWindows(repeatCount);
+  };
+</script>
+</head>
+<body></body>
+</html>
